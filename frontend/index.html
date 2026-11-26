@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J.A.R.V.I.S Mobile OS</title>
+  <meta name="theme-color" content="#00f3ff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>J.A.R.V.I.S</h1>
+      <div class="controls">
+        <span id="statusBadge" class="status-badge">ONLINE</span>
+        <button id="wakeBtn" class="top-btn">Wake: OFF</button>
+        <button id="keyBtn" class="top-btn">API Key</button>
+      </div>
+    </header>
+
+    <div class="reactor-section">
+      <div class="arc-reactor" id="reactor">
+        <div class="core"></div>
+      </div>
+    </div>
+
+    <div id="chatWindow" class="chat-window">
+      <div class="message jarvis">All systems online, Boss. Tap 'API Key' at the top right to connect your key, then tap MIC to speak!</div>
+    </div>
+
+    <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
+
+    <div class="input-bar">
+      <button id="camBtn" class="circle-btn" title="Camera Vision">CAM</button>
+      <button id="micBtn" class="circle-btn" title="Voice Input">MIC</button>
+      <input type="text" id="userInput" placeholder="Speak or type here..." />
+      <button id="sendBtn" class="circle-btn" title="Send">GO</button>
+      <button id="clearBtn" class="circle-btn" title="Clear Memory">DEL</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
