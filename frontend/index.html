@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>J.A.R.V.I.S Mobile OS</title>
+  <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#00f3ff" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <link rel="stylesheet" href="style.css" />
@@ -19,6 +20,16 @@
       </div>
     </header>
 
+    <!-- In-App API Key Box (Works 100% without browser popup blocks) -->
+    <div id="keyBox" style="display:none; background:#0b2239; border:1px solid #00f3ff; border-radius:10px; padding:10px; margin-top:8px;">
+      <div style="font-size:0.8rem; color:#00f3ff; margin-bottom:6px;">Paste Google Gemini API Key:</div>
+      <div style="display:flex; gap:6px;">
+        <input type="text" id="apiKeyInput" placeholder="AIzaSy..." style="flex:1; padding:8px; border-radius:8px; border:1px solid #00f3ff; background:#040914; color:#fff; font-size:0.85rem;" />
+        <button id="saveKeyBtn" class="top-btn" style="background:#00f3ff; color:#040914; font-weight:bold;">Save</button>
+        <button id="closeKeyBtn" class="top-btn" style="border-color:#ff4d4d; color:#ff4d4d;">X</button>
+      </div>
+    </div>
+
     <div class="reactor-section">
       <div class="arc-reactor" id="reactor">
         <div class="core"></div>
@@ -26,7 +37,7 @@
     </div>
 
     <div id="chatWindow" class="chat-window">
-      <div class="message jarvis">All systems online, Boss. Tap 'API Key' at the top right to connect your key, then tap MIC to speak!</div>
+      <div class="message jarvis">All systems online, Boss. Tap 'API Key' at the top right to paste your key, then tap MIC to speak!</div>
     </div>
 
     <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden />
@@ -43,4 +54,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
